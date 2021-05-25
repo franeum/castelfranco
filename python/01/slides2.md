@@ -88,13 +88,31 @@
 ---
 
 - In generale, $N$ bit possono rappresentare $2^N$ possibilità
-- ogni sequenza di bit può essere usata per rappresentare un numero in un range da $0$ a $N - 1$
+- una sequenza di bit può essere usata per rappresentare diverse `entità`
 
-| bit | 1 | 0 | 0 | 1 | 1 | 
-|---|---|---|---|---|---|
-| peso | 16 | 8 | 4 | 2 | 1 |
-| position | 4 | 3 | 2 | 1 | 0 |
-|value|$2^4\cdot{1}$|$2^3\cdot0$|$2^2\cdot0$|$2^1\cdot1$|$2^0\cdot1$|
+---
+
+## numeri
+
+- con una sequenza di N bit si può rappresentare un numero da $0$ a $N - 1$
+- ad esempio, che numero in base 10 rappresenta la stringa binaria $10011$?
+
+---
+
+| bit      | 1             | 0           | 0           | 1           | 1           |
+| -------- | ------------- | ----------- | ----------- | ----------- | ----------- |
+| position | 4             | 3           | 2           | 1           | 0           |
+| value    | $2^4\cdot{1}$ | $2^3\cdot0$ | $2^2\cdot0$ | $2^1\cdot1$ | $2^0\cdot1$ |
+| result   | 16            | 0           | 0           | 2           | 1           |
+
+la somma di tutti i valori da $19$
+
+---
+
+## caratteri
+
+Con sequenze di bit si possono rappresentare caratteri, che sono `internamente` associati a dei valori di 8 bit
+
 
 ---
 
