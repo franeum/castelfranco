@@ -37,22 +37,32 @@
 
 ---
 
-- una ricetta come la precedente ha un certo grado di flessibilità (qb significa *quanto basta*, quanta acqua devo usare? che significa circa?)
+- una ricetta come la precedente ha un certo grado di flessibilità (*qb* significa *quanto basta*, quanta acqua devo usare? che significa circa?)
 - la flessibilità spesso in un programma per computer significa **ambiguità**
+
+---
+
+## Esercizio
+### qual è la media dei miei voti?
+
+- quante soluzioni ci sono?
+- quante e quali strategie?
+- quali sono gli elementi coinvolti?
+- sei in grado di descrivere *formalmente* i passi necessari per eseguire il calcolo?
 
 ---
 
 - per evitare l'ambiguità i programmi per computer vengono scritti in un **linguaggio di programmazione**
 - ...che consente di descrivere i passi di un algoritmo tramite 
   - un **lessico** (insieme di parole e simboli *legali*)
-  - una **sintassi** (forma con cui viene utilizzato il lessico)
-  - una **semantica** (significato che le forme sintattiche hanno)
+  - una **sintassi** (la forma con cui viene utilizzato il lessico)
+  - una **semantica** (il significato che le forme sintattiche hanno)
 
 ---
 
 - i programmi sono scritti in forma leggibile, con una notazione `testuale`
 - ...ma poi devono essere **tradotti** in un linguaggio che sia comprensibile per un computer
-- come la notazione musicale, che di per sé non produce alcun suono, deve essere tracdotta in suono attraverso un'azione del musicista (il *suonare*)
+- come la notazione musicale, che di per sé non produce alcun suono, deve essere tradotta in suono attraverso un'azione del musicista (il *suonare*)
 
 ---
 
@@ -111,19 +121,108 @@ la somma di tutti i valori da $19$
 
 ## caratteri
 
-Con sequenze di bit si possono rappresentare caratteri, che sono `internamente` associati a dei valori di 8 bit
+- Con sequenze di bit si possono rappresentare caratteri, che sono `internamente` associati a dei valori di 8 bit
+- `HELLO!`:  
 
-
----
-
-### qual è la media dei miei voti?
-
-- quante soluzioni ci sono?
-- quante e quali strategie?
-- quali sono gli elementi coinvolti?
+$01001000$ $01000101$  
+$01001100$ $01001100$  
+$0 1 0 0 1 1 1 1$ $0 0 1 0 0 0 0 1$
 
 ---
 
-### Devo frequentare un corso di 40 ore, ma posso saltare il 30% delle ore, quante lezioni devo frequentare se ogni lezione dura 3 ore?
+### Tutto può essere rappresentato con i numeri (binari)
+
+- Audio
+- Immagini
+- Video
 
 ---
+
+## CPU
+
+- Al centro di tutto c'è la **cpu**, un pezzo di hardware costituito da miliardi di **transistor**, ognuno dei quali produce un valore di 1 o 0
+- i transistor sono responsabili dell'esecuzione dei nostri programmi. Ogni numero rappresenta una istruzione, o un dato su cui operare
+
+---
+
+- Per fare in modo che un programma sia eseguito dalla CPU, deve essere convertito in **linguaggio macchina**, cioè una serie di istruzioni in formato binario
+
+---
+
+- Il processo di traduzione del **codice sorgente** in **linguaggio macchina** avviene attraverso un software chiamato **compilatore** oppure tramite un software chiamato **interprete**
+
+---
+
+- Nel primo caso (compilatore) il codice viene trasformato interamente in linguaggio macchina in modo preventivo (è come un libro tradotto)
+- Nel secondo caso (interprete) il codice viene trasformato in linguaggio macchina man mano che viene scritto (è come un oratore che viene tradotto in tempo reale da un interprete di lingua)
+
+---
+
+- Esiste un terzo caso che ibrida le due forme precedenti, il codice viene compilato in un linguaggio intermedio che a sua volta viene interpretato
+- Il linguaggio che impareremo in questo corso fa uso di questa terza metodologia
+
+---
+
+# Python
+
+- Linguaggio di programmazione di alto (altissimo) livello creato da Guido van Rossum nel 1991
+- Usato per fare **qualunque** cosa:
+  - computazione numerica
+  - *scripting*
+  - applicazioni web
+  - giochi
+  - analisi dati
+  - machine learning
+  - gestione database
+
+---
+
+## caratteristiche principali
+
+- software libero e *open source*
+- multi-paradigma
+- *cross-platform* e *portabile*
+- facile, leggibile ed estremamente espressivo
+- ricchissimo di librerie
+
+---
+
+## quanto si usa python?
+
+<img src=images/coding.png>
+
+---
+
+## crescita
+<img src=images/crescita.png>
+
+---
+
+## chi usa python?
+
+- Google
+- Instagram
+- Facebook
+- Dropbox
+- mozilla
+- Nasa
+- Netflix
+- e molti altri...
+
+---
+
+## Come si usa python?
+
+- si *installa* l'interprete e:
+  - si apre un terminale e si scrive il codice e si esegue riga per riga
+  - si scrive un intero script e si esegue integralmente
+  - si adotta un approccio ibrido:
+    - si scrivono porzioni di codice e si eseguono *a frammenti*
+
+---
+
+## Anaconda
+
+- distribuzione python specializzata in computazione scientifica
+- contiene l'interprete python e numerose librerie per il calcolo scientifico e il software Jupyter, che useremo per scrivere il codice
+- si isntalla prelevando i files al seguente [indirizzo](https://www.anaconda.com/products/individual)
