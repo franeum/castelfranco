@@ -51,7 +51,7 @@
 ---
 
 - i programmi sono scritti in forma leggibile, con una notazione `testuale`
-- ...ma poi devono essere **tracdotti** in un linguaggio che sia comprensibile per un computer
+- ...ma poi devono essere **tradotti** in un linguaggio che sia comprensibile per un computer
 - come la notazione musicale, che di per sé non produce alcun suono, deve essere tracdotta in suono attraverso un'azione del musicista (il *suonare*)
 
 ---
