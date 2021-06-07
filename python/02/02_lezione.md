@@ -31,6 +31,7 @@ Calcola quanti mesi di vita hai vissuto
 1. Moltiplica per 4 la differenza fra il quadrato di 5 e il quadrato di 3
 2. Eleva al quadrato la somma del cubo di 2 e del quadrato di 1, poi dividi il risultato per 27
 
+<div style="page-break-after: always;"></div>
 
 # Espressioni che non resituiscono numeri
 
@@ -46,6 +47,8 @@ Calcola quanti mesi di vita hai vissuto
 
 - Scrivere un'espressione che restituisca **True**
 - Scrivere un'espressione che restituisca **False**
+
+<div style="page-break-after: always;"></div>
 
 # Variabili
 
@@ -77,6 +80,7 @@ Calcola l'area del trapezio dell'esercizio precedente assegnando i valori alle v
 ### Usa le variabili per risolvere il seguente problema
 Se un violino costa 500 euro, quanto lo pagherò se ottengo uno sconto del 30%?
 
+<div style="page-break-after: always;"></div>
 
 # Le Stringhe
 
