@@ -58,6 +58,7 @@ Calcola quanti mesi di vita hai vissuto
   - convenzioni
 - operatore di assegnamento (=)
   - tramite questo operatore associamo un oggetto (un numero o *qualunque* altro oggetto) a una variabile
+  - assegnazioni multiple
 - cosa possiamo assegnare ad una variabile?
 - l'assegnamento avviene da destra a sinistra, prima python *valuta* l'espressione a destra, poi assegna il valore valutato alla variabile
 - in python non esistono variabili propriamente dette, ma **etichette**
