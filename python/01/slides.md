@@ -1,3 +1,33 @@
+---
+
+theme: "white"
+transition: "slide"
+transitionSpeed: "slow"
+slideNumber: false
+overview: false
+previewLinks: false
+controls: true
+dataState: "no-title-footer"
+
+---
+
+<style>
+    .reveal code {
+        background-color: #66b3ff;
+        color: #000000;
+        padding: 0.2em 0.25em 0.2em 0.25em;
+    }
+
+    #title-footer {
+        display: none;
+    }
+</style>
+
+<script>
+    mermaid.initialize({ theme: 'neutral' })
+</script>
+
+
 # programmazione
 
 ---

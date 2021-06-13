@@ -98,13 +98,57 @@ Se un violino costa 500 euro, quanto lo pagherò se ottengo uno sconto del 30%?
 
 <div style="page-break-after: always;"></div>
 
+# Funzioni sulle stringhe
+
+- **len()**: lunghezza
+
 # Introspezione
 
 Python consente di fare instrospezione, cioè di ottenere informazioni sugli oggetti presenti in un programma.
 
 Importanti funzioni di instrospezione:
-- tipo di un oggetto: type()
-- elenco degli attributi: dir()
-- descrizione di una funzione o di un attributo: help()
-- identità di un oggetto: id()
+- identità di un oggetto: **id()**
+- tipo di un oggetto: **type()**
+- elenco degli attributi: **dir()**
+- descrizione di una funzione o di un attributo: **help()**
 
+Ogni tipo definisce un insieme di attributi, alcuni dei quali sono dati *accessorii* dell'oggetto, altri sono *chiamabili*, cioè sono delle vere e proprie operazioni da compiere sull'oggetto. Questi attributi *operazionali* sono detti **metodi**.
+Per sapere se un attributo di un oggetto è un metodo, si può chiamare l'attributo con la funzione *callable*:
+
+```py
+callable(str.capitalize)
+```
+
+che resituirà **True** o **False**.
+
+## Metodi importanti delle stringhe
+
+Alcuni metodi restituiscono informazioni su una stringa:
+- upper(): restituisce una stringa tutta maiuscola
+- lower(): restituisce una stringa tutta minuscola
+- replace(): sostituisce uno o più caratteri con altri
+- count(): conta il numero di occorrenze di un caratteri o di una sequenza di caratteri
+- isdigit(): restituisce **True** se la stringa contiene delle cifre  
+
+# La funzione input()
+
+Permette di *catturare* una sequenza di caratteri immessi da tastiera. Permette di stampare una stringa di descrizione del testo da immettere e restituisce a sua volta la stringa immessa da tastiera.
+
+```py
+input("scrivi il tuo nome: ")
+```
+
+## Conversione
+
+Le stringhe possono essere convertite in numeri. Se una stringa contiene delle cifre, possiamo convertirla in numero intero con **int()**. Se invece contiene cifre separate da un punto, possiamo convertirla in **float**.
+
+Il meccanismo della conversione consente di ottenere valori numerici da tastiera, tramite la funzione input() e la conversione con int() e float()
+
+### esempio:
+
+```py
+anno_di_nascita = input("quando sei nato? ")
+anno_attuale = 2021
+eta = anno_attuale - anno_di_nascita
+print(f"Hai {eta} anni!")
+```
