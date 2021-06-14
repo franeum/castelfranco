@@ -232,7 +232,9 @@ Il meccanismo della conversione consente di ottenere valori numerici da tastiera
 2. Acquisisci due stringhe (una alla volta) con la funzione **input()** e stampa le due stringhe concatenate con l'operatore **+**
 3. Scrivi un programma che prenda in input la base e l'altezza di un triangolo e restituisca l'area. Usa **input()** per acquisire i due valori, inseriscili in due variabili e convertili in numero, poi calcola l'area, inseriscila in una variabile **area** e stampa il suo valore 
 4. Scrivi un programma che acquisica una stringa da input, stampi il tipo dell'oggetto, l'identità e l'elenco dei metodi
+5. Esplora i metodi per le stringhe con la funzione **dir()** e cerca di capire cosa fanno i metodi **str.capitalize()**, **str.title()**, **str.strip()**. Usa la funzione **help()** su un metodo per accedere alla sua documentazione
 
+<div style="page-break-after: always;"></div>
 
 # Slicing
 
@@ -247,6 +249,10 @@ Una stringa è una sequenza *ordinata* di caratteri. In quanto ordinata i caratt
 Per accedere a un singolo carattere di una stringa si usa la notazione a **slicing** semplice:
 
 ```py
+str[index]
+```
+
+```py
 stringa = 'howard'
 print(stringa[0])
 >>> h
@@ -258,7 +264,7 @@ print(stringa[-1])
 ```
 ## Slicing con inizio e fine
 
-Con lo stesso tipo di notazione posso ottenere *fettine* di una stringa, definendo un punto di inizio e un punto di fine separati da due punti (:):
+Con lo stesso tipo di notazione posso ottenere *fettine* di una stringa, cioè frammenti, definendo un punto di inizio e un punto di fine separati da due punti:
 
 ```py
 str[start:end]
@@ -321,7 +327,7 @@ print(stringa[:])
 >>> leonard hofstader
 ```
 
-E se si aggiunge l'argomento step a -1 si ottiene l'intera stringa al contrario:
+E se si aggiunge l'argomento *step* a -1 si ottiene l'intera stringa al contrario:
 
 ```py
 stringa = 'leonard hofstader'
@@ -331,5 +337,16 @@ print(stringa[::-1])
 
 ### Esercitazioni
 
-1. Scrivi un programma che prenda in input una stringa e stampi prima i soli caratteri in posizione pari, poi i caratteri in posizione dispari
-2. Scrivi un programma che prenda in input due stringhe (una alla volta), le concateni tramite l'operatore **+** e stampi
+1. Scrivi un programma che prenda in input una stringa e stampi prima una stringa formata dai soli caratteri in posizione pari, poi un'altra stringa formata dai caratteri in posizione dispari
+     * esempio: 
+       * stringa di entrata: "BigBangTheory"
+       * uscita1: "Bgaghoy"
+       * uscita2: "iBnTer"
+2. Scrivi un programma che prenda in input una stringa e calcoli il numero dei soli caratteri pari (usa lo slicing e la funzione len())
+3. Scrivi un programma che prenda in input una frase (una stringa formata da caratteri e spazi) e produca in uscita la frase senza gli spazi e stampi anche la lunghezza della stringa.
+4. Scrivi un programma che prenda in input due stringhe (una alla volta), le concateni tramite l'operatore **+** e stampi 3 volte la nuova stringa ottenuta.
+     * esempio:
+       * stringa1: "ciao"
+       * stringa2: "mondo"
+       * uscita: "ciao mondo ciao mondo ciao mondo" 
+     * N.B. *Attenzione agli spazi!*
