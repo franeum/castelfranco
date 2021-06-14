@@ -98,10 +98,6 @@ Se un violino costa 500 euro, quanto lo pagherò se ottengo uno sconto del 30%?
 
 <div style="page-break-after: always;"></div>
 
-# Funzioni sulle stringhe
-
-- **len()**: lunghezza
-
 # Introspezione
 
 Python consente di fare instrospezione, cioè di ottenere informazioni sugli oggetti presenti in un programma.
@@ -121,7 +117,7 @@ callable(str.capitalize)
 
 che resituirà **True** o **False**.
 
-## Metodi importanti delle stringhe
+## Metodi importanti delle stringhe 
 
 Alcuni metodi restituiscono informazioni su una stringa:
 - upper(): restituisce una stringa tutta maiuscola
@@ -130,7 +126,55 @@ Alcuni metodi restituiscono informazioni su una stringa:
 - count(): conta il numero di occorrenze di un caratteri o di una sequenza di caratteri
 - isdigit(): restituisce **True** se la stringa contiene delle cifre  
 
-# La funzione input()
+```py
+# str.upper()
+stringa = "sheldon cooper"
+print(stringa.upper())
+>>> SHELDON COOPER
+```
+
+
+```py
+# str.lower()
+stringa = "ShEldOn cooPer"
+print(stringa.lower())
+>>> sheldon cooper
+```
+
+```py
+# str.replace()
+stringa = "sheldon cooper"
+print(stringa.replace('o','a'))
+>>> sheldan caaper
+```
+
+```py
+# str.count()
+stringa = "sheldon cooper"
+print(stringa.count('o'))
+>>> 3
+```
+
+```py
+# str.isdigit()
+stringa = "sheldon cooper"
+print(string.isdigit())
+>>> False
+```
+
+```py
+# str.isdigit()
+stringa = "23"
+print(string.isdigit())
+>>> True
+```
+
+
+I metodi **NON** modificano la stringa originale, ma creano una **NUOVA** stringa modificata. Gli oggetti di tipo **str** infatti sono **IMMUTABILI**, come del resto gli **int** e i **float**. 
+
+## Funzioni importanti delle stringhe
+
+### input()
 
 Permette di *catturare* una sequenza di caratteri immessi da tastiera. Permette di stampare una stringa di descrizione del testo da immettere e restituisce a sua volta la stringa immessa da tastiera.
 
@@ -138,17 +182,154 @@ Permette di *catturare* una sequenza di caratteri immessi da tastiera. Permette 
 input("scrivi il tuo nome: ")
 ```
 
+### len()
+
+Restituisce la lunghezza di una stringa, cioè la quantità di caratteri che la compongono.
+
+```py
+stringa = "Leonard Hofstader"
+lunghezza = len(stringa)
+print(lunghezza)
+>>> 17 
+```
+
 ## Conversione
+
+La conversione di *tipo* permette di convertire un oggetto di un tipo in un oggetto di un altro tipo. Ad esempio un numero di tipo *float* può essere convertito in un oggetto di tipo *int*:
+
+```py
+>>> numero = 13.8
+>>> numero_convertito = int(numero)
+>>> print(numero_convertito)
+>>> 13
+``` 
 
 Le stringhe possono essere convertite in numeri. Se una stringa contiene delle cifre, possiamo convertirla in numero intero con **int()**. Se invece contiene cifre separate da un punto, possiamo convertirla in **float**.
 
-Il meccanismo della conversione consente di ottenere valori numerici da tastiera, tramite la funzione input() e la conversione con int() e float()
+```py
+stringa = '13'
+print(type(stringa))
+>>> <class 'str'>
+numero = int(stringa)
+print(numero)
+print(type(numero))
+>>> 13
+>>> <class 'int'>
+```
 
-### esempio:
+Il meccanismo della conversione consente di ottenere valori numerici da tastiera tramite la funzione input() e di convertirli con int() e float() in un valore di tipo numerico.
 
 ```py
-anno_di_nascita = input("quando sei nato? ")
-anno_attuale = 2021
-eta = anno_attuale - anno_di_nascita
-print(f"Hai {eta} anni!")
+>>> anno_di_nascita = input("quando sei nato? ")
+>>> anno_attuale = 2021
+>>> eta = anno_attuale - anno_di_nascita
+>>> print("Hai", eta, "anni!")
 ```
+
+### Esercitazioni
+
+1. Acquisisci una stringa con la funzione **input()** e stampa la stringa acquisita, tutta al maiuscolo
+2. Acquisisci due stringhe (una alla volta) con la funzione **input()** e stampa le due stringhe concatenate con l'operatore **+**
+3. Scrivi un programma che prenda in input la base e l'altezza di un triangolo e restituisca l'area. Usa **input()** per acquisire i due valori, inseriscili in due variabili e convertili in numero, poi calcola l'area, inseriscila in una variabile **area** e stampa il suo valore 
+4. Scrivi un programma che acquisica una stringa da input, stampi il tipo dell'oggetto, l'identità e l'elenco dei metodi
+
+
+# Slicing
+
+Una stringa è una sequenza *ordinata* di caratteri. In quanto ordinata i caratteri hanno una *posizione* identificata da un **indice**
+
+| stringa | 'h' | 'o' | 'w' | 'a' | 'r' | 'd' |
+| ------- | --- | --- | --- | --- | --- | --- |
+| indice  | 0   | 1   | 2   | 3   | 4   | 5   |
+
+## Slicing semplice (index)
+
+Per accedere a un singolo carattere di una stringa si usa la notazione a **slicing** semplice:
+
+```py
+stringa = 'howard'
+print(stringa[0])
+>>> h
+print(stringa[1])
+>>> o
+# posso usare l'indice -1 per ottenere l'ultimo carattere
+print(stringa[-1])
+>>> d
+```
+## Slicing con inizio e fine
+
+Con lo stesso tipo di notazione posso ottenere *fettine* di una stringa, definendo un punto di inizio e un punto di fine separati da due punti (:):
+
+```py
+str[start:end]
+```
+
+```py
+stringa = 'howard'
+# Ottengo tutti i caratteri dall'indice 1 all'indice 3 (escluso)
+print(stringa[1:3])
+>>> ow
+```
+
+Se si omette il punto di inizio, è implicito che il punto di inizio sia il primo carattere:
+
+```py
+stringa = 'rajesh'
+# Ottengo i caratteri dall'inizio fino all'indice 4 (escluso)
+print(stringa[:4])
+>>> raje
+```
+
+Se si omette il punto di fine, è implicito che il punto di fine sia l'ultimo carattere:
+
+```py
+stringa = 'rajesh'
+# Ottengo i caratteri dall'indice 4 fino alla fine
+print(stringa[4:])
+>>> sh
+```
+
+## Slicing con inizio, fine e *step*
+
+Si può aggiungere anche un terzo argomento, che definisce lo *step*, cioè il passo con cui estrarre i caratteri, la notazione è:
+
+```py
+str[start:end:step]
+```
+
+```py
+stringa = "sheldon cooper"
+# Ottengo i caratteri dall'indice 1 all'indice -1 (escluso) procedendo a passi di due
+print(stringa[1:-1:2])
+>>> hlo op
+```
+
+Naturalmente è possibile omettere l'inizio e/o la fine:
+
+```py
+stringa = "sheldon cooper"
+# Ottengo i caratteri dall'inizio fino all'indice 6 (escluso) procedendo a passi di due
+print(stringa[:6:2])
+>>> sed
+```
+
+Trucchetto: se si omette l'inizio e la fine si ottiene una copia dell'intera stringa:
+
+```py
+stringa = 'leonard hofstader'
+print(stringa[:])
+>>> leonard hofstader
+```
+
+E se si aggiunge l'argomento step a -1 si ottiene l'intera stringa al contrario:
+
+```py
+stringa = 'leonard hofstader'
+print(stringa[::-1])
+>>> redatsfoh dranoel
+```
+
+### Esercitazioni
+
+1. Scrivi un programma che prenda in input una stringa e stampi prima i soli caratteri in posizione pari, poi i caratteri in posizione dispari
+2. Scrivi un programma che prenda in input due stringhe (una alla volta), le concateni tramite l'operatore **+** e stampi
