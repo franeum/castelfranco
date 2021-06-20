@@ -355,24 +355,191 @@ print(stringa[::-1])
 
 # Selezione
 
+## Espressioni booleane
+
+Si tratta di un'espressione booleana, cioè di un'espressione che, valutata, restituisce un valore pari a **True** o **False**. 
+Un'espressione booleana può essere: 
+
+1. costituita da un solo elemento. In quel caso, alla valutazione, restituisce True se quell'elemento è un numero (int o float) diverso da 0 o un oggetto (stringa, lista, dizionario) non vuoti.
+2. costituita da due operandi separati di un **operatore di relazione**:
+  - **<**, minore di
+  - **>**, maggiore di
+  - **==**, uguale a
+  - **!=**, diverso da
+  - **<=**, minore o uguale a
+  - **>=**, maggiore o uguale a
+3. costituita da due (o più) espressioni booleane *connesse* tramite **operatori logici**:
+  - **and**
+  - **or**
+  - **not**  
+
+### tavole di verità
+
+| A   | B   | and |
+| --- | --- | --- |
+| V   | V   | V   |
+| V   | F   | F   |
+| F   | V   | F   |
+| F   | F   | F   |
+
+| A   | B   | or  |
+| --- | --- | --- |
+| V   | V   | V   |
+| V   | F   | V   |
+| F   | V   | V   |
+| F   | F   | F   |
+
+| A   | not |
+| --- | --- |
+| V   | F   |
+| F   | V   |
+
+### Esempi
+
+```py
+x = 10
+y = 15
+```
+
+valutare le seguenti espressioni:
+
+```
+x < 20
+x > 11
+x != y
+x == y
+x <= 10
+y >= 5
+```
+
+```
+x > 9 and x < 11
+x > 5 or x < 9
+not x > 5
+```
+
+<div style="page-break-after: always;"></div>
+
 ## if
+
+Istruzione che permette di eseguire un blocco di codice solo al verificarsi di una condizione
+
 ### struttura
 
-### condizione
+```py
+if condizione:
+  # esegui questo codice
+```
+tradotto in linguaggio naturale:
+
+```
+se la condizione è vera, allora fai una certa cosa
+```
 
 ### indentazione
 
-### operatori di confronto
+Il codice python non *racchiude* i blocchi di codice fra parentesi graffe, come invece fanno il C, il java e il javascript. Per identificare un blocco di codice si usa l'*indentazione*. In una istruzione **if**, il blocco di codice da eseguire dopo i *due punti* deve essere scritto integralmente con lo stesso livello di indentazione:
 
-### operatori logici
+```py
+if condizione:
+  print("A")
+  print("B")
+  print("C")
+```
 
 ### esempio
 - valore assoluto di un numero inserito da tastiera
 
-### esercizio
+```py
+numero = int("inserisci un numero: ")
+
+if numero < 0:
+  numero = -numero
+
+print(numero)
+```
+
+### esercizi
+- acquisire 2 numeri interi e stampare la distanza in valore assoluto fra i due. Esempio:
+
+```py
+a = 12
+b = 17
+>>> La distanza è 5
+```
+
+<div style="page-break-after: always;"></div>
 
 ## if/else
 
+```py
+if condizione:
+  # fai qualcosa
+else:
+  # fai un'altra osa
+```
+
+### esercizi
+
+- acquisire due numeri (tramite input()) e stampare il maggiore fra i due
+- acquisire un numero e stampare "è pari", se il numero è pari, altrimenti stampare "è dispari"
+- chiedere all'utente di inserire una stringa e poi di inserire un numero *n*. Stampare quindi il carattere della stringa in posizione *n*. Se il numero *n* è più lungo della lunghezza della stringa, stampate invece la stringa "numero troppo alto"
+- chiedere all'utente di inserire una stringa e stampare solo i caratteri che si trovano agli indici in posizione pari se il numero dei caratteri è pari, altrimenti stampare i caratteri agli indici dispari se il numero dei caratteri è dispari
+- Chiedere all'utente di inserire un numero. Se il numero è minore o uguale a 100 stampare tanti asterischi (*) quanto vale il numero, altrimenti stampare tanti più (+) quanto vale il numero. Esempio, se il numero è 9, stampare:
+
+```
+*********
+```
+
 ## if/elif/else
 
-## annidare
+struttura:
+
+```py
+if condizione:
+  # esegui questo blocco
+elif condizione2:
+  # esegui quest'altro blocco
+else:
+  # esegui quest'altro blocco ancora
+```
+
+## Esempio
+- trovare il maggiore fra 3 numeri interi inseriti dall'utente
+
+```py
+primo = int(input("inserisci un numero: "))
+secondo = int(input("inserisci un numero: "))
+terzo = int(input("inserisci un numero: "))
+
+if numero1 > numero2 and numero1 > numero3:
+    print("il maggiore è", numero1)
+elif numero2 > numero3:
+    print("il maggiore è", numero2)
+else:
+    print("Il maggiore è", numero3)
+```
+
+## annidare 
+
+```py
+numero1 = int(input("inserisci un numero: "))
+numero2 = int(input("inserisci un numero: "))
+numero3 = int(input("inserisci un numero: "))
+
+if numero1 == numer2 == numero3:
+  print("i numeri sono uguali")
+else:
+  if numero1 > numero2 and numero1 > numero3:
+    print("il maggiore è", numero1)
+  elif numero2 > numero3:
+    print("il maggiore è", numero2)
+  else:
+    print("Il maggiore è", numero3)
+```
+
+## if indipendenti
+
+### esercizi
+
+- Chiedere all'utente di inserire un numero. Se il numero è divisibile per 3 stampare "Il numero è divisibile per 3", se è divisibile per 2, stampare "Il numero è divisibile per 2", altrimenti stampare "Il numero non è divisibile né per 2 né per 3"
