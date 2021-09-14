@@ -18,7 +18,18 @@ distribuzione, tentiamo 6 settimane:
 ### javascript: 3,6,9,12,14,16
 ### altro: 3,6,9,12,15,18,20
 
-calendario:
-python: 1-15-22-29-6 (tutti da 3 ore)
-javascript: 1-15-22-29-6-13 (tutte da 3, le ultime due da 2)
-altro: 31/08-16-23-30-7-14 (tutte da 3 ore, l'ultima da 4)
+calendario:  
+python: 15-22-29-6-13 (tutti da 3 ore)  
+javascript: 15-22-29-6-13 (tutte da 3, l'ultima da 4)  
+altro: 2-16-23-30-7-14 (tutte da 3 ore, le ultime 2 da 4)  
+
+I gruppo (python)
+Sistemi e linguaggi di programmazione per l'audio e le applicazioni musicali I 
+Sistemi e linguaggi di programmazione per l'audio e le applicazioni musicali II
+Sistemi tecnologie applicazioni e linguaggi di programmazione per la multimedialità II
+
+II gruppo
+Sistemi e linguaggi di programmazione per l'audio e le applicazioni musicali II (biennio)
+
+III gruppo
+Sistemi e linguaggi di programmazione per l'audio e le applicazioni musicali III (melis)
