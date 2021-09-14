@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p id="demo"></p>
+
+        <button type="button" onclick="scrivi()">Click Me!</button>
+        <script>
+            const DANTE =
+                "nel mezzo del cammin di nostra vita, mi ritrovai per una selva oscura che la diritta via era smarrita.";
+
+            function scrivi() {
+                document.getElementById("demo").innerHTML =
+                    "<h2>" + random_string() + "</h2>";
+            }
+
+            function random_string() {
+                let splitted = DANTE.split(" ");
+                let lensplitted = splitted.length;
+                let middle = Math.round(lensplitted / 2);
+                let a_new = splitted.slice(0, Math.random() * middle + middle);
+
+                shuffle(a_new);
+
+                return a_new.join(" ");
+            }
+
+            function shuffle(array) {
+                var currentIndex = array.length,
+                    randomIndex;
+
+                // While there remain elements to shuffle...
+                while (currentIndex != 0) {
+                    // Pick a remaining element...
+                    randomIndex = Math.floor(Math.random() * currentIndex);
+                    currentIndex--;
+
+                    // And swap it with the current element.
+                    [array[currentIndex], array[randomIndex]] = [
+                        array[randomIndex],
+                        array[currentIndex],
+                    ];
+                }
+
+                return array;
+            }
+        </script>
+    </body>
+</html>
